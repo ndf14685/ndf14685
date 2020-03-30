@@ -1,17 +1,33 @@
 instalar ssh
+-- en Ubuntu
+sudo apt-get install openssh-server
+sudo apt-get install openssh-client
 
 chequear que el agente ssh este corriendo
+-- en Ubuntu
+eval $(ssh-agent -s)
 
 Situarnos en el directorio de SSH 
+cd /home/usuario/ y crear el directorio .ssh
+cd .ssh
 
 Crear keys, tengo definir una pass
+ejecutar el comando ssh-keygen
+-- pasarle como ruta /home/usuario/.ssh/id_rsa_xxxx
+Se crearan dos archivos, uno con extension ".pub" (Publica)
 
 Entro a key publica y la copio
+Leer el archivo .pub y copiar la clave (sin espacios al comienzo y al final)
 
 Voy a Github a setting y configuro key publica
 
 Modifico proyecto para que use conexion cifrada 
+Ingresar al directorio oculto '.git' y editar el archivo que se llaman 'config'
+[remote "origin"]
+        url = https://github.com/ndf14685/pairProg
+Editar la URL por la que corresponga: git@github.com:ndf14685/pairProg.git
 
 Hago un commit con un cambio cualquiera
 
 Hago un push a master, me va a pedir Pass generada 
+Pide la pass por unica vez, los posteriores cambios ya no los pide
