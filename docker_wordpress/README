@@ -6,3 +6,14 @@ Consideraciones a tener:
 Docker instalado, configurado y funcionando. 
 
 
+- Crear repo  donde vamos a alojar los archivos de Docker
+
+- Dentro del directorio, crear dockerCompose.yml
+
+Segun ejemplo de documentacion oficial: 
+https://docs.docker.com/compose/wordpress/
+
+
+docker-compose up -d
+
+docker-compose up 
