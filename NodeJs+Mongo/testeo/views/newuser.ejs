@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nuevo usuario</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <form id="formAddUser" name="adduser" method="post" action="/adduser">
+      <input id="inputUserName" type="text" placeholder="Nombre" name="username" />
+      <input id="inputUserEmail" type="text" placeholder="E-mail" name="useremail" />
+      <button id="btnSubmit" type="submit">Enviar</button>
+    </form>
+  </body>
+</html>
